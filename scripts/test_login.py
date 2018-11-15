@@ -20,7 +20,4 @@ class TestLogin:
         # 我的-登录/注册
         self.page.mine.click_login_and_sign_up()
 
-        # 输入用户名
-        # 输入密码
-        # 点击登录
 
