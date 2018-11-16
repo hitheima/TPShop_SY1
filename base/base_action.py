@@ -1,3 +1,4 @@
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
 
@@ -26,3 +27,10 @@ class BaseAction:
 
     def get_text(self, feature):
         return self.find_element(feature).text
+
+    def is_toast_exist(self, text):
+        try:
+            self.find_element((By.XPATH, "//*[contains(@text,'%s')]" % text))
+            return True
+        except Exception:
+            return False
