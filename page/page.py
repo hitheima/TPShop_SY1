@@ -16,7 +16,6 @@ class Page:
     def mine(self):
         return MinePage(self.driver)
 
-
     @property
     def login(self):
         return LoginPage(self.driver)

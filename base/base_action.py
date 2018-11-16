@@ -31,9 +31,14 @@ class BaseAction:
     def get_text(self, feature):
         return self.find_element(feature).text
 
-    def is_toast_exist(self, text):
+    def is_toast_exist(self, text, is_contains=True):
+
+        toast_feature_value = "//*[contains(@text,'%s')]" % text
+        if not is_contains:
+            toast_feature_value = "//*[@text='%s']" % text
+
         try:
-            self.find_element((By.XPATH, "//*[contains(@text,'%s')]" % text), timeout=5, poll=0.5)
+            self.find_element((By.XPATH, toast_feature_value), timeout=5, poll=0.5)
             return True
         except Exception:
             return False
