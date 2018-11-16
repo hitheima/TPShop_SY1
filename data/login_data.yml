@@ -27,3 +27,10 @@ test_login:
 #    username: "12300138006"
 #    password: "123456"
 #    hint: "账号不存在"
+test_login_miss_part:
+  test_login_007:
+    username: "13800138006"
+    password: ""
+#  test_login_008:
+#    username: ""
+#    password: "123456"

@@ -25,6 +25,9 @@ class BaseAction:
     def input(self, feature, text):
         self.find_element(feature).send_keys(text)
 
+    def is_feature_enabled(self, feature):
+        return self.find_element(feature).is_enabled()
+
     def get_text(self, feature):
         return self.find_element(feature).text
 
