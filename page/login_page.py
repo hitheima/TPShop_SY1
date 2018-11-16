@@ -32,6 +32,12 @@ class LoginPage(BaseAction):
     def click_show_password(self):
         self.click(self.show_password_button)
 
+        # self.driver.get_screenshot_as_file("xx.png")
+        # with open("xx.png", "rb") as f:
+        #     allure.attach("截图", f.read(), allure.attach_type.PNG)
+
+        allure.attach("截图", self.driver.get_screenshot_as_png(), allure.attach_type.PNG)
+
     def is_login_button_enabled(self):
         return self.is_feature_enabled(self.login_button)
 
