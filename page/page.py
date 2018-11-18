@@ -1,6 +1,7 @@
 from page.home_page import HomePage
 from page.login_page import LoginPage
 from page.mine_page import MinePage
+from page.setting_page import SettingPage
 
 
 class Page:
@@ -19,4 +20,8 @@ class Page:
     @property
     def login(self):
         return LoginPage(self.driver)
+
+    @property
+    def setting(self):
+        return SettingPage(self.driver)
 
