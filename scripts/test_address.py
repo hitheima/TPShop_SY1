@@ -26,12 +26,10 @@ class TestAddress:
             # 登录-点击登录
             self.page.login.click_login()
 
-        print("收货地址")
+        self.page.mine.click_address()
+        time.sleep(5)
 
-        time.sleep(10)
-        # 新建地址
-        # 添加联系人
-        # 添加手机
+
 
 
 
